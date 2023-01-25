@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
   char ch;
-  cout << "Enter alpha-numeric character: ";
+  cout << "Enter alpha-numeric character:  ";
   cin >> ch;
 
   if (ch > 96 && ch < 123)
