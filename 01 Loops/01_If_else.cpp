@@ -21,6 +21,6 @@ int main()
   }
   else
   {
-    cout << "Please enter only alpha-numeric!";
+    cout << "Please enter only alpha-numeric characters!";
   }
 }
