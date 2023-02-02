@@ -6,11 +6,10 @@ int main()
 
   /*
   Printing:
-    *****
-     ****
-      ***
-       **
-        *
+    1111
+     222
+      33
+       4
   */
 
   int n;
@@ -35,7 +34,7 @@ int main()
     while (col >= row)
     {
       // char ch = ('*' * (n - row + 1));
-      cout << '*';
+      cout << row;
       col--;
     }
     cout << endl;

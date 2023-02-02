@@ -6,10 +6,12 @@ int main()
 
   /*
   Printing:
-    D
-    CD
-    BCD
-    ABCD
+
+    *****
+    ****
+    ***
+    **
+    *
   */
 
   int n;

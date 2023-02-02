@@ -6,11 +6,10 @@ int main()
 
   /*
   Printing:
-    *****
-     ****
-      ***
-       **
-        *
+    1234
+     234
+      34
+       4
   */
 
   int n;
@@ -19,12 +18,9 @@ int main()
 
   int row = 1;
 
-  char ch = 'A';
-  // cout << ch << endl;
-
   while (row <= n)
   {
-    int col = n;
+    int col = row;
     int space = 1;
     while (space <= row - 1)
     {
@@ -32,11 +28,11 @@ int main()
       space++;
     }
 
-    while (col >= row)
+    while (col <= n)
     {
       // char ch = ('*' * (n - row + 1));
-      cout << '*';
-      col--;
+      cout << col;
+      col++;
     }
     cout << endl;
     row++;
