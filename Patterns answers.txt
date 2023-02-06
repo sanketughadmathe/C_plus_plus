@@ -42,7 +42,6 @@ int main()
 }
 
 
-
 /*
 
 Q2.
@@ -71,7 +70,6 @@ int main()
 
     for (int j = 0; j < i + 1; j++)
     {
-      // cout << "*";
       if (i == 0 || i == n - 1)
       {
         cout << "* ";
@@ -183,6 +181,7 @@ int main()
 }
 
 /*
+Q5.
 Printing pattern
   1 2 3 4 5 6
   2       6
@@ -228,6 +227,7 @@ int main()
 
 
 /*
+Q6.
 Printing pattern
        *
       * *
@@ -280,6 +280,7 @@ int main()
 
 
 /*
+Q7.
 Printing pattern
             *
           *   *
@@ -337,4 +338,392 @@ int main()
     }
     cout << endl;
   }
+}
+
+
+/*
+Q8.
+Printing pattern
+            *
+          *   *
+        *       *
+      *           *
+    *               *
+  *                   *
+  *                   *
+    *               *
+      *           *
+        *       *
+          *   *
+            *
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int i;
+  int j;
+  int n;
+  cout << "Enter the value of n: " << endl;
+  cin >> n;
+
+  for (int i = 0; i < n; i++)
+  {
+
+    // Spaces
+    for (int space = 0; space < n - i - 1; space++)
+    {
+      cout << " ";
+    }
+
+    for (int j = 0; j <= i; j++)
+    {
+
+      if (j == 0 || j == i)
+      {
+        cout << "* ";
+      }
+      else
+      {
+        cout << "  ";
+      }
+    }
+    cout << endl;
+  }
+
+  for (int i = 0; i < n; i++)
+  {
+
+    // Spaces
+    for (int space = 0; space < i; space++)
+    {
+      cout << " ";
+    }
+
+    for (int j = 0; j <= n - i - 1; j++)
+    {
+
+      if (j == 0 || j == n - i - 1)
+      {
+        cout << "* ";
+      }
+      else
+      {
+        cout << "  ";
+      }
+    }
+    cout << endl;
+  }
+}
+
+
+/*
+Q9.
+Printing pattern
+  * * * * * * * * * *
+  * * * *     * * * *
+  * * *         * * *
+  * *             * *
+  *                 *
+  *                 *
+  * *             * *
+  * * *         * * *
+  * * * *     * * * *
+  * * * * * * * * * *
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int i;
+  int j;
+  int n;
+
+  cout << "Enter the value of n: " << endl;
+  cin >> n;
+
+  for (int i = 0; i < n; i++)
+  {
+    for (int j = 0; j < n - i; j++)
+    {
+      cout << "* ";
+    }
+
+    for (int space = 0; space < 2 * i; space++)
+    {
+      cout << "  ";
+    }
+
+    for (int j = 0; j <= n - i - 1; j++)
+    {
+      cout << "* ";
+    }
+
+    cout << endl;
+  }
+
+  for (int i = 0; i < n; i++)
+  {
+
+    for (int j = 0; j <= i; j++)
+    {
+      cout << "* ";
+    }
+
+    for (int space = 0; space < 2 * (n - i - 1); space++)
+    {
+      cout << "  ";
+    }
+
+    for (int j = 0; j <= i; j++)
+    {
+      cout << "* ";
+    }
+
+    cout << endl;
+  }
+}
+
+
+/*
+
+Q10.
+Printing pattern
+  1
+  2*2
+  3*3*3
+  4*4*4*4
+  4*4*4*4
+  3*3*3
+  2*2
+  1
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int i;
+  int j;
+  int n = 4;
+
+  // cout << "Enter the value of n: " << endl;
+  // cin >> n;
+
+  for (int i = 0; i < n; i++)
+  {
+
+    for (int j = 0; j <= i; j++)
+    {
+      if (j == 0)
+      {
+        cout << i + 1;
+      }
+      else
+      {
+        cout << "*" << i + 1;
+      }
+    }
+    cout << endl;
+  }
+
+  for (int i = 0; i < n; i++)
+  {
+    for (int j = 0; j < n - i; j++)
+    {
+      if (j == 0)
+      {
+        cout << n - i;
+      }
+      else
+      {
+        cout << "*" << n - i;
+      }
+    }
+    cout << endl;
+  }
+}
+
+/*
+
+Q11.
+Printing pattern
+            1
+          1 2 1
+        1 2 3 2 1
+      1 2 3 4 3 2 1
+    1 2 3 4 5 4 3 2 1
+  1 2 3 4 5 6 5 4 3 2 1
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int i;
+  int j;
+  int n;
+
+  cout << "Enter the value of n: " << endl;
+  cin >> n;
+
+  for (int i = 0; i < n; i++)
+  {
+
+    // Spaces
+    for (int spaces = 0; spaces < n - i - 1; spaces++)
+    {
+      cout << "  ";
+    }
+
+    // Number
+    for (int j = 0; j <= i; j++)
+    {
+      cout << j + 1 << " ";
+    }
+
+    // Reverse Number
+    for (int j = 0; j <= i; j++)
+    {
+      if (i - j != 0)
+      {
+        cout << i - j << " ";
+      }
+    }
+
+    cout << endl;
+  }
+
+
+/*
+
+Q12.
+Printing pattern
+  * * * * * * * * 1 * * * * * * * *
+  * * * * * * * 2 * 2 * * * * * * *
+  * * * * * * 3 * 3 * 3 * * * * * *
+  * * * * * 4 * 4 * 4 * 4 * * * * *
+  * * * * 5 * 5 * 5 * 5 * 5 * * * *
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int i;
+  int j;
+  int n = 5;
+
+  // cout << "Enter the value of n: " << endl;
+  // cin >> n;
+
+  for (int i = 0; i < n; i++)
+  {
+
+    // Star
+    for (int spaces = 0; spaces < n - i + 3; spaces++)
+    {
+      cout << "* ";
+    }
+
+    // Number
+    for (int j = 0; j <= i; j++)
+    {
+      cout << i + 1 << " * ";
+    }
+
+    // Star
+    for (int spaces = 0; spaces < n - i + 2; spaces++)
+    {
+      cout << "* ";
+    }
+
+    // Reverse Number
+    // for (int j = 0; j <= i; j++)
+    // {
+    //   if (i - j != 0)
+    //   {
+    //     cout << i - j << " ";
+    //   }
+    // }
+
+    cout << endl;
+  }
+}
+
+/*
+
+Q13.
+Printing pattern
+  *
+  * *
+  * * *
+  * * * *
+  * * * * *
+  * * * *
+  * * *
+  * *
+  *
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int i;
+  int j;
+  int n;
+
+  cout << "Enter the value of n: " << endl;
+  cin >> n;
+
+  for (int i = 0; i < n; i++)
+  {
+
+    // Star
+    for (int j = 0; j <= i; j++)
+    {
+      cout << "* ";
+    }
+    cout << endl;
+  }
+  for (int i = 0; i < n; i++)
+  {
+
+    // Star
+    for (int j = 0; j < n - i - 1; j++)
+    {
+      cout << "* ";
+    }
+    cout << endl;
+  }
+
+  // Number
+  // for (int j = 0; j <= n - i; j++)
+  // {
+  //   cout << " * ";
+  // }
+
+  // Star
+  // for (int spaces = 0; spaces < n - i + 2; spaces++)
+  // {
+  //   cout << "* ";
+  // }
+
+  // Reverse Number
+  // for (int j = 0; j <= i; j++)
+  // {
+  //   if (i - j != 0)
+  //   {
+  //     cout << i - j << " ";
+  //   }
+  // }
 }

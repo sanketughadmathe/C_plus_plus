@@ -1,17 +1,14 @@
 /*
+
+Q12.
 Printing pattern
-            *
-          *   *
-        *   *   *
-      *   *   *   *
-    *   *   *   *   *
-  *   *   *   *   *   *
-  *   *   *   *   *   *
-    *   *   *   *   *
-      *   *   *   *
-        *   *   *
-          *   *
-            *
+  *
+  * 1 *
+  * 1 2 1 *
+  * 1 2 3 2 1 *
+  * 1 2 1 *
+  * 1 *
+  *
 */
 
 #include <iostream>
@@ -21,38 +18,49 @@ int main()
 {
   int i;
   int j;
-  int n;
-  cout << "Enter the value of n: " << endl;
-  cin >> n;
+  int n = 9;
 
-  for (int i = 0; i < n; i++)
+  // cout << "Enter the value of n: " << endl;
+  // cin >> n;
+
+  for (int i = 0; i <= n / 2; i++)
   {
 
-    // Spaces
-    for (int space = 0; space < n - i - 1; space++)
+    for (int j = 0; j < (2 * i) + 1; j++)
     {
-      cout << " ";
-    }
+      // if (i == 0 || i == n - 1)
+      // {
+      //   cout << "* ";
+      // }
+      // else
+      if (j == 0)
+      {
+        cout << "* ";
+      }
+      else if (j == (2 * i))
+      {
+        // cout << j << " ";
 
-    for (int j = 0; j <= i; j++)
-    {
-      cout << "* ";
-    }
-    cout << endl;
-  }
+        // Number
+        // for (int k = 0; k < i / 2; k++)
+        // {
+        //   cout << k;
+        // }
 
-  for (int i = 0; i < n; i++)
-  {
+        // Reverse Number
+        // for (int j = 0; j <= i; j++)
+        // {
+        //   if (i - j != 0)
+        //   {
+        //     cout << i - j << " ";
+        //   }
+        // }
+      }
+      else
+      {
 
-    // Spaces
-    for (int space = 0; space < i; space++)
-    {
-      cout << " ";
-    }
-
-    for (int j = 0; j <= n - i - 1; j++)
-    {
-      cout << "* ";
+        cout << j << " ";
+      }
     }
     cout << endl;
   }
