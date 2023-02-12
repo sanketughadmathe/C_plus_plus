@@ -48,7 +48,7 @@ int main()
         // }
 
         // Reverse Number
-        // for (int j = 0; j <= i; j++)
+        // for (int j = 0; j <= i; j++)s
         // {
         //   if (i - j != 0)
         //   {

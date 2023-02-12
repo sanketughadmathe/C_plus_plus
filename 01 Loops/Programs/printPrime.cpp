@@ -24,16 +24,16 @@ void printPrime(int n)
 
     if (isPrime)
     {
-      primeFound = 1;
+      cout << i;
     }
-    if (primeFound)
-    {
-      cout << n;
-    }
-    else
-    {
-      cout << "No prime no.";
-    }
+    // if (primeFound)
+    // {
+    //   cout << n;
+    // }
+    // else
+    // {
+    //   cout << "No prime no.";
+    // }
   }
 }
 
@@ -44,5 +44,13 @@ int main()
   cin >> n;
   // int isPrime = primeCheck(n);
   // cout << isPrime;
-  printPrime(n);
+  // printPrime(n);
+  for (size_t i = 2; i <= n; i++)
+  {
+    bool isiPrime = primeCheck(i);
+    if (isiPrime)
+    {
+      cout << i << endl;
+    }
+  }
 }

@@ -162,7 +162,6 @@ int main()
 
     for (int j = 0; j <= i; j++)
     {
-      // cout << "* ";
       if (i == 0 || i == n - 1)
       {
         cout << (j + 1) << " ";
