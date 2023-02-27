@@ -19,6 +19,7 @@ bool isPossible(vector<int> arr, int n, int m, int mid)
       pageSum = arr[i];
     }
   }
+  return true;
 }
 
 int allocateBooks(vector<int> arr, int n, int m)
@@ -28,7 +29,6 @@ int allocateBooks(vector<int> arr, int n, int m)
 
   for (size_t i = 0; i < n; i++)
     sum += arr[i];
-
   int e = sum;
   int ans = -1;
   int mid = s + (e - s) / 2;
@@ -56,4 +56,5 @@ int main()
   int ans = allocateBooks(arr, n, m);
 
   cout << "Minimum Page to be alloted is: " << ans << endl;
+  return 0;
 }
