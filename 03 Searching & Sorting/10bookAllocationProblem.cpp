@@ -35,7 +35,6 @@ int allocateBooks(vector<int> arr, int n, int m)
 
   while (s <= e)
   {
-
     if (isPossible(arr, n, m, mid))
     {
       ans = mid;
@@ -50,7 +49,7 @@ int allocateBooks(vector<int> arr, int n, int m)
 
 int main()
 {
-  vector<int> arr = {10, 20, 30, 40};
+  vector<int> arr = {5, 5, 5, 5};
   int n = 4;
   int m = 2;
   int ans = allocateBooks(arr, n, m);
